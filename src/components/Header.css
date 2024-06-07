@@ -76,9 +76,9 @@ header {
 .dropdown-button {
    color: #40c2d3;
       background-color: #40c2d3;
-    background: none;
+   
     border: none;
-    color: inherit;
+   
     font: inherit;
     cursor: pointer;
     padding: 0;
