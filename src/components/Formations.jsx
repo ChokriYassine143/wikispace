@@ -67,7 +67,7 @@ const Formations = () => {
                                 </div>
                                 <div className="card-back">
                                     <div onClick={ ()=>{
-                                        Navigate("/formation/id");
+                                        Navigate("/FormationDetails");
                                     }} className="card-back-content">
                                         <h3>{formation.title}</h3>
                                         <p><strong>Hours:</strong> {formation.hours}</p>
