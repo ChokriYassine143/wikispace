@@ -74,6 +74,7 @@ header {
     display: block;
 }
 .dropdown-button {
+   color: #40c2d3;
       background-color: #40c2d3;
     background: none;
     border: none;
