@@ -74,6 +74,7 @@ header {
     display: block;
 }
 .dropdown-button {
+      background-color: #40c2d3;
     background: none;
     border: none;
     color: inherit;
