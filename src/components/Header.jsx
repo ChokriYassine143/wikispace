@@ -6,12 +6,18 @@ import logo2 from './logo1.png';
 const Header = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
+    const toggleDropdown = (event) => {
+        event.preventDefault();
         setIsDropdownOpen(!isDropdownOpen);
     };
 
     const closeDropdown = () => {
         setIsDropdownOpen(false);
+    };
+
+    const handleDropdownClick = (event) => {
+        event.preventDefault();
+        closeDropdown();
     };
 
     return (
@@ -24,12 +30,12 @@ const Header = () => {
                         <li><a href="/apropos">Apropos</a></li>
                         <li><a href="/formations">Formation</a></li>
                         <li className="dropdown" onMouseLeave={closeDropdown}>
-                            <a href="#" onClick={toggleDropdown}>Coworking</a>
+                            <button onClick={toggleDropdown} className="dropdown-button">Coworking</button>
                             {isDropdownOpen && (
                                 <div className="dropdown-content">
-                                    <a href="/cowrking">Coworking</a>
-                                    <a href="/Domiciliation">Domiciliation</a>
-                                    <a href="#">Événement</a>
+                                    <a href="/cowrking" onClick={handleDropdownClick}>Coworking</a>
+                                    <a href="/Domiciliation" onClick={handleDropdownClick}>Domiciliation</a>
+                                    <a href="#" onClick={handleDropdownClick}>Événement</a>
                                 </div>
                             )}
                         </li>
