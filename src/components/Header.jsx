@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo1 from './logo1.png';
 import logo2 from './logo1.png';
@@ -15,8 +16,7 @@ const Header = () => {
         setIsDropdownOpen(false);
     };
 
-    const handleDropdownClick = (event) => {
-        event.preventDefault();
+    const handleDropdownClick = () => {
         closeDropdown();
     };
 
@@ -26,20 +26,20 @@ const Header = () => {
                 <img src={logo1} alt="Logo 1" className="logo" />
                 <nav>
                     <ul className="menu">
-                        <li><a href="/">Acceuil</a></li>
-                        <li><a href="https://wikispace.onrender.com/apropos">Apropos</a></li>
-                        <li><a href="https://wikispace.onrender.com/formations">Formation</a></li>
+                        <li><Link to="/">Acceuil</Link></li>
+                        <li><Link to="/apropos">Apropos</Link></li>
+                        <li><Link to="/formations">Formation</Link></li>
                         <li className="dropdown" onMouseLeave={closeDropdown}>
                             <button onClick={toggleDropdown} className="dropdown-button">Coworking</button>
                             {isDropdownOpen && (
                                 <div className="dropdown-content">
-                                    <a href="https://wikispace.onrender.com/cowrking" onClick={handleDropdownClick}>Coworking</a>
-                                    <a href="https://wikispace.onrender.com/Domiciliation" onClick={handleDropdownClick}>Domiciliation</a>
-                                    <a href="#" onClick={handleDropdownClick}>Événement</a>
+                                    <Link to="/coworking" onClick={handleDropdownClick}>Coworking</Link>
+                                    <Link to="/domiciliation" onClick={handleDropdownClick}>Domiciliation</Link>
+                                    <Link to="/evenement" onClick={handleDropdownClick}>Événement</Link>
                                 </div>
                             )}
                         </li>
-                        <li><a href="https://wikispace.onrender.com/contact">Contact</a></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </nav>
                 <img src={logo2} alt="Logo 2" className="logo" />
