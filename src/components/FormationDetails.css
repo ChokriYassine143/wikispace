@@ -1,0 +1,155 @@
+/* Formation Details Component Styles */
+
+.formation-details {
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.formation-header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.formation-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.formation-header-content {
+    flex-grow: 1;
+}
+
+.formation-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formation-instructor {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.formation-stats {
+    color: #777;
+    font-size: 1em;
+}
+
+.formation-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formation-description,
+.formation-stats-details,
+.signup-section,
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.formation-description h2,
+.formation-stats-details h2,
+.signup-section h2,
+.contact-section h2 {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.formation-description p,
+.formation-stats-details p,
+.signup-section p,
+.contact-section p {
+    color: #555;
+}
+
+.stats-card {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.signup-button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.signup-button:hover {
+    background-color: #005a4c;
+}
+
+.payment-options {
+    display: flex;
+    gap: 10px;
+}
+
+.online, .in-person {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.online:hover, .in-person:hover {
+    background-color: #00796b;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005a4c;
+}

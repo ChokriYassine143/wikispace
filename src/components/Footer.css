@@ -1,0 +1,32 @@
+footer {
+    background-color: #40c2d3;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-left p,
+.footer-left a {
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.location-image {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+}

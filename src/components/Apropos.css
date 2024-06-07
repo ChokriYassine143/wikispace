@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main.apropos-page {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.apropos-section {
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.apropos-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #40c2d3;
+}
+
+.apropos-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.apropos-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.apropos-section li {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.apropos-section li strong {
+    color: #40c2d3;
+}

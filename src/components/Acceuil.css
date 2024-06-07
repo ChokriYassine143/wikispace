@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.welcome-image {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ce-qui-nous-faisons {
+    margin-bottom: 40px;
+}
+
+.ce-qui-nous-faisons h2 {
+    font-size: 2em;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ce-qui-nous-faisons .content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #004d40;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery {
+    margin-bottom: 40px;
+}
+
+.gallery h2 {
+    font-size: 2em;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.photo-grid img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 10px;
+    animation: cycle 20s linear infinite;
+}
+
+.photo-grid img:hover {
+    transform: rotate(10deg);
+    opacity: 0.8;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.contact-form {
+    margin-bottom: 40px;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-size: 1em;
+    color: #004d40;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #40c2d3;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #00796b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cycle {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
