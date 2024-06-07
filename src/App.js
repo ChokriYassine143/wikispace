@@ -15,7 +15,7 @@ const App = () => {
                 <Route path="/contact" element={<ContactFormPage />} />
                 <Route path="/apropos" element={<Apropos />} />
                 <Route path="/domiciliation" element={<Domiciliation />} /> 
-                <Route path="/cowrking" element={<Coworking />} />
+                <Route path="/coworking" element={<Coworking />} />
                 <Route path="/formations" element={<Formation />} /> 
                 <Route path="/FormationDetails" element={<FormationDetails />} /> 
                  {/* Add Route for Domiciliation component */}
