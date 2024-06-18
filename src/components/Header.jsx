@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import logo1 from './logo1.png';
-import logo2 from './logo1.png';
+import logo2 from './logo2.png';
 
 const Header = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);

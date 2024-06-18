@@ -1,52 +1,172 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
 }
 
-main.apropos-page {
+.apropos-page {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.apropos-section {
-    background-color: white;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
+.image-section {
     text-align: center;
 }
 
-.apropos-section h2 {
-    font-size: 2em;
+.apropos-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
     margin-bottom: 20px;
-    color: #40c2d3;
+}
+
+.slogans-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.slogan-card {
+    display: flex;
+    align-items: center;
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    transition: transform 0.3s;
+}
+
+.slogan-card:hover {
+    transform: translateY(-5px);
+}
+
+.arrow {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #00796b;
+}
+
+.slogan-description-card {
+    flex: 1;
+    background-color: #f3efef;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apropos-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apropos-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
 }
 
 .apropos-section p {
-    font-size: 1.2em;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .apropos-section ul {
-    list-style-type: none;
-    padding: 0;
+    padding-left: 20px;
 }
 
 .apropos-section li {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    text-align: left;
+    margin-bottom: 8px;
 }
 
 .apropos-section li strong {
-    color: #40c2d3;
+    font-weight: bold;
+    color: #00796b;
+}
+
+@media (max-width: 768px) {
+    .apropos-section {
+        padding: 15px;
+    }
+    
+    .apropos-section h2 {
+        font-size: 22px;
+    }
+}
+
+.partners-and-contact {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.partners-section, .contact-form-section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.partners-logos img {
+    max-width: 150px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.partners-logos img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-section label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.contact-form-section input, .contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form-section button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.contact-form-section button:hover {
+    background-color: #005f56;
 }
