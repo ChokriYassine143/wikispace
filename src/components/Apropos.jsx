@@ -49,14 +49,7 @@ const Apropos = () => {
                     </ul>
                 </section>
                 <section className="partners-and-contact">
-                    <div className="partners-section">
-                        <h2>Nos Partenaires</h2>
-                        <div className="partners-logos">
-                            <img src={PartnerLogo1} alt="Partner 1" />
-                            <img src={PartnerLogo2} alt="Partner 2" />
-                            <img src={PartnerLogo3} alt="Partner 3" />
-                        </div>
-                    </div>
+                   
                     <div className="contact-form-section">
                         <h2>Contactez-Nous</h2>
                         <form>

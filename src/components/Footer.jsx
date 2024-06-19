@@ -8,6 +8,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div className="footer-left">
                     <p>Email: <a href="mailto:wikispace.tn@gmail.com">wikispace.tn@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+21698406369">+216 90 001 309</a></p>
                     <p>Phone: <a href="tel:+21698406369">+216 98 406 369</a></p>
                     <p>Open 24/7</p>
                 </div>
@@ -19,10 +20,9 @@ const Footer = () => {
                 <div className="footer-social">
                     <h4>Suivez-nous sur</h4>
                     <ul>
-                        <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                        <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/wikispace.tn" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/wiki.space/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        
                     </ul>
                 </div>
             </div>
