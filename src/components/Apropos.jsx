@@ -3,10 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import './Apropos.css';
 import AproposImage from './aprops.jpg';  // Add the appropriate image path
-import PartnerLogo1 from './logo1.png';  // Add the appropriate image path
-import PartnerLogo2 from './logo1.png';  // Add the appropriate image path
-import PartnerLogo3 from './logo1.png';  // Add the appropriate image path
-
+import img1 from './22.jpg'
 const Apropos = () => {
     return (
         <div>
@@ -49,7 +46,7 @@ const Apropos = () => {
                     </ul>
                 </section>
                 <section className="partners-and-contact">
-                   
+               
                     <div className="contact-form-section">
                         <h2>Contactez-Nous</h2>
                         <form>
@@ -71,6 +68,9 @@ const Apropos = () => {
                             </label>
                             <button type="submit">Envoyer</button>
                         </form>
+                    </div>
+                    <div className="partners-section">
+                     <img src={img1} width="500px" ></img>
                     </div>
                 </section>
             </main>

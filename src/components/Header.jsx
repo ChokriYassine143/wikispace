@@ -7,17 +7,12 @@ import logo2 from './logo2.png';
 const Header = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const toggleDropdown = (event) => {
-        event.preventDefault();
-        setIsDropdownOpen(!isDropdownOpen);
+    const handleMouseEnter = () => {
+        setIsDropdownOpen(true);
     };
 
-    const closeDropdown = () => {
+    const handleMouseLeave = () => {
         setIsDropdownOpen(false);
-    };
-
-    const handleDropdownClick = () => {
-        closeDropdown();
     };
 
     return (
@@ -26,16 +21,16 @@ const Header = () => {
                 <img src={logo1} alt="Logo 1" className="logo" />
                 <nav>
                     <ul className="menu">
-                        <li><Link to="/">Acceuil</Link></li>
-                        <li><Link to="/apropos">Apropos</Link></li>
+                        <li><Link to="/">Accueil</Link></li>
+                        <li><Link to="/apropos">À propos</Link></li>
                         <li><Link to="/formations">Formation</Link></li>
-                        <li className="dropdown" onMouseLeave={closeDropdown}>
-                            <button onClick={toggleDropdown} className="dropdown-button">Coworking</button>
+                        <li className="dropdown" onMouseEnter={handleMouseEnter} >
+                            <button className="dropdown-button">Coworking</button>
                             {isDropdownOpen && (
                                 <div className="dropdown-content">
-                                    <Link to="/coworking" onClick={handleDropdownClick}>Coworking</Link>
-                                    <Link to="/domiciliation" onClick={handleDropdownClick}>Domiciliation</Link>
-                                    <Link to="/evenement" onClick={handleDropdownClick}>Événement</Link>
+                                    <Link to="/coworking">Coworking</Link>
+                                    <Link to="/domiciliation">Domiciliation</Link>
+                                    <Link to="/evenement">Événement</Link>
                                 </div>
                             )}
                         </li>
