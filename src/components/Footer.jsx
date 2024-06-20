@@ -9,8 +9,8 @@ const Footer = () => {
                 <div className="footer-left">
                     <p>Email: <a href="mailto:wikispace.tn@gmail.com">wikispace.tn@gmail.com</a></p>
                     <p>Phone: <a href="tel:+21698406369">+216 90 001 309</a></p>
-                    <p>Phone: <a href="tel:+21698406369">+216 98 406 369</a></p>
-                    <p>Open 24/7</p>
+                    <p>Phone: <a href="tel:+21698406369">++216 26 001 309</a></p>
+              
                 </div>
                 <div className="footer-right">
                     <a href='https://www.google.com/maps/place/Wiki+space/@35.837146,10.6264886,15z/data=!4m2!3m1!1s0x0:0xf466807b1228d809?sa=X&ved=1t:2428&ictx=111' target='_blank' rel='noopener noreferrer'>
