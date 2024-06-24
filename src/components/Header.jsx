@@ -30,7 +30,7 @@ const Header = () => {
                                 <div className="dropdown-content">
                                     <Link to="/coworking">Coworking</Link>
                                     <Link to="/domiciliation">Domiciliation</Link>
-                                    <Link to="/evenement">Événement</Link>
+                                    <Link to="/evenements">Événement</Link>
                                 </div>
                             )}
                         </li>

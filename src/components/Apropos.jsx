@@ -2,8 +2,12 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './Apropos.css';
+import img3 from "./contact.png";
 import AproposImage from './aprops.jpg';  // Add the appropriate image path
-import img1 from './22.jpg'
+import img1 from './p2.jpg';
+import img2 from './p1.png';
+import images from './previousformations';  // Assuming this imports your images correctly
+
 const Apropos = () => {
     return (
         <div>
@@ -24,7 +28,14 @@ const Apropos = () => {
                         <h3>Les formations qui éveillent la conscience de vos compétences</h3>
                         <span className="arrow">→</span>
                         <div className="slogan-description-card">
-                            <p>Wiki Space offre un environnement créé par des entrepreneurs, pour des entrepreneurs, assurant tout le soutien nécessaire pour que votre entreprise prospère.</p>
+                            <p>WST offre un environnement créé par des entrepreneurs, pour des entrepreneurs, assurant tout le soutien nécessaire pour que votre entreprise prospère.</p>
+                        </div>
+                    </div>
+                    <div className="slogan-card">
+                        <h3>Le cabinet WST né d'une véritable  passion pour accompagner la diversité de vos enjeux. </h3>
+                        <span className="arrow">→</span>
+                        <div className="slogan-description-card">
+                            <p>Notre savoir-faire et nos compétences reposent sur les formations variées effectuées durant ces dernières années. Quel que soit votre projet, WST vous accompagne, identifie l'ensemble de vos besoins et vous propose un package répondant à votre attente.</p>
                         </div>
                     </div>
                 </section>
@@ -45,8 +56,20 @@ const Apropos = () => {
                         <li><strong>Domiciliation :</strong> Service de domiciliation commerciale pour établir le siège social de votre entreprise.</li>
                     </ul>
                 </section>
+                <section className="gallery-section">
+                    <h2>Galerie des Formations Inspirantes</h2>
+                    <div className="photo-grid">
+                        {images.map((image, index) => (
+                            <img src={image} alt={`Gallery ${index + 1}`} key={index} />
+                        ))}
+                    </div>
+                </section>
+                <div className="partners-section">
+                    <h1>Nos Partenaires</h1>
+                    <img src={img1} className='ss' width="150px" alt="Partner 1" />
+                    <img src={img2} className="ss" width="150px" alt="Partner 2" />
+                </div>
                 <section className="partners-and-contact">
-               
                     <div className="contact-form-section">
                         <h2>Contactez-Nous</h2>
                         <form>
@@ -70,7 +93,7 @@ const Apropos = () => {
                         </form>
                     </div>
                     <div className="partners-section">
-                     <img src={img1} width="500px" ></img>
+                        <img src={img3} width="500px" alt="Contact" />
                     </div>
                 </section>
             </main>

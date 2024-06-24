@@ -95,6 +95,9 @@ body {
     color: #00796b;
 }
 
+h1, h2 {
+    color: #00796b;
+}
 @media (max-width: 768px) {
     .apropos-section {
         padding: 15px;
@@ -146,7 +149,9 @@ body {
     margin: 10px 0;
     font-weight: bold;
 }
-
+.ss{
+    margin-right: 350px;
+}
 .contact-form-section input, .contact-form-section textarea {
     width: 100%;
     padding: 10px;

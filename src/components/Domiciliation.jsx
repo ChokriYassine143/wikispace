@@ -12,7 +12,7 @@ const Domiciliation = () => {
                     <div className="image-container">
                         <img src={image} alt="Domiciliation" className="domiciliation-image" />
                         <div className="image-text">
-                            <h2>Domiciliation d'entreprise à Tunis</h2>
+                            <h2>Domiciliation d'entreprise à Sousse</h2>
                         </div>
                     </div>
                     <p>Wiki Space offre un service de domiciliation pour les entreprises à Tunis. Que vous soyez une start-up en plein essor ou une entreprise établie, nous fournissons une adresse commerciale prestigieuse pour établir le siège social de votre entreprise.</p>

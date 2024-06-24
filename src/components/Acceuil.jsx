@@ -10,6 +10,7 @@ import img4 from './55.jpg';
 import img5 from './66.jpg';
 import img6 from './77.jpg';
 import img7 from './88.jpg';
+import contact from "./contact.png";
 
 const Acceuil = () => {
     return (
@@ -42,29 +43,32 @@ const Acceuil = () => {
                 </section>
                 <section className="contact-form">
                     <h2>Contactez-Nous</h2>
-                    <form>
-                        <label>
-                            Nom:
-                            <input type="text" name="name" required />
-                        </label>
-                        <label>
-                            Email:
-                            <input type="email" name="email" required />
-                        </label>
-                        <label>
-                            Numéro:
-                            <input type="text" name="Numero" required />
-                        </label>
-                        <label>
-                            Sujet:
-                            <input type="text" name="subject" required />
-                        </label>
-                        <label>
-                            Message:
-                            <textarea name="message" required></textarea>
-                        </label>
-                        <button type="submit">Envoyer</button>
-                    </form>
+                    <div className="contact-content">
+                        <form>
+                            <label>
+                                Nom:
+                                <input type="text" name="name" required />
+                            </label>
+                            <label>
+                                Email:
+                                <input type="email" name="email" required />
+                            </label>
+                            <label>
+                                Numéro:
+                                <input type="text" name="Numero" required />
+                            </label>
+                            <label>
+                                Sujet:
+                                <input type="text" name="subject" required />
+                            </label>
+                            <label>
+                                Message:
+                                <textarea name="message" required></textarea>
+                            </label>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                        <img src={contact} width="500px" alt="Contact" className="contact-image" />
+                    </div>
                 </section>
             </main>
             <Footer />

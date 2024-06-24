@@ -1,0 +1,50 @@
+.evenement-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.evenement-gallery h2 {
+    font-size: 2em;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Center align items in the grid */
+}
+
+.gallery-image {
+    width: 100%; /* Ensures images take full width of their container */
+    height: 100%; /* Ensures images take full height of their container */
+    max-width: 500px; /* Adjust max-width as needed */
+    max-height: 500px;  /* Adjust max-height as needed */
+    object-fit: cover; /* Ensures the image covers the entire space */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s ease-out; /* Smooth scaling on hover */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Optional: If you want to add animation on image load */
+.gallery-image {
+    animation: fadeIn 0.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

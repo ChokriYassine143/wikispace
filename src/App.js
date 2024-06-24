@@ -7,7 +7,7 @@ import Domiciliation from './components/Domiciliation';
 import Coworking from './components/Coworking';
 import Formation from './components/Formations';
 import FormationDetails from './components/FormationDetails';
-
+import EvenementGallery from './components/event';
 const App = () => {
     return (
         <Router>
@@ -19,6 +19,7 @@ const App = () => {
                 <Route path="/coworking" element={<Coworking />} />
                 <Route path="/formations" element={<Formation />} />
                 <Route path="/FormationDetails" element={<FormationDetails />} />
+                <Route path="/evenements" element={<EvenementGallery />} />
             </Routes>
         </Router>
     );
