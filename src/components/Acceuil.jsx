@@ -13,6 +13,9 @@ import img7 from './88.jpg';
 import contact from "./contact.png";
 
 const Acceuil = () => {
+    const images = [img1, img2, img3, img4, img5, img6, img7];
+    const duplicatedImages = [...images, ...images]; // Duplicate the images array
+
     return (
         <div>
             <Header />
@@ -32,42 +35,27 @@ const Acceuil = () => {
                 <section className="gallery">
                     <h2>Galerie des Photos</h2>
                     <div className="photo-grid">
-                        <img src={img1} alt="Photo 1" />
-                        <img src={img2} alt="Photo 2" />
-                        <img src={img3} alt="Photo 3" />
-                        <img src={img4} alt="Photo 4" />
-                        <img src={img5} alt="Photo 5" />
-                        <img src={img6} alt="Photo 6" />
-                        <img src={img7} alt="Photo 7" />
+                        <div className="photo-container">
+                            {duplicatedImages.map((image, index) => (
+                                <img key={index} src={image} alt={`Photo ${index + 1}`} />
+                            ))}
+                        </div>
                     </div>
                 </section>
-                <section className="contact-form">
-                    <h2>Contactez-Nous</h2>
-                    <div className="contact-content">
+                <section className="contact-section">
+                    <div className="contact-form-section">
+                        <h2>Contactez-Nous</h2>
                         <form>
-                            <label>
-                                Nom:
-                                <input type="text" name="name" required />
-                            </label>
-                            <label>
-                                Email:
-                                <input type="email" name="email" required />
-                            </label>
-                            <label>
-                                Numéro:
-                                <input type="text" name="Numero" required />
-                            </label>
-                            <label>
-                                Sujet:
-                                <input type="text" name="subject" required />
-                            </label>
-                            <label>
-                                Message:
-                                <textarea name="message" required></textarea>
-                            </label>
+                            <input type="text" name="name" placeholder="Nom" required />
+                            <input type="email" name="email" placeholder="Email" required />
+                            <input type="text" name="subject" placeholder="Sujet" required />
+                            <input type="text" name="numero" placeholder="Numéro" required />
+                            <textarea name="message" placeholder="Message" required></textarea>
                             <button type="submit">Envoyer</button>
                         </form>
-                        <img src={contact} width="500px" alt="Contact" className="contact-image" />
+                    </div>
+                    <div className="contact-image-section">
+                        <img src={contact} alt="Contact" className="contact-image" />
                     </div>
                 </section>
             </main>

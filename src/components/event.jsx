@@ -33,12 +33,13 @@ const EvenementGallery = () => {
                 <h2>Galerie des Événements</h2>
                 <div className="gallery-grid">
                     {images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`Événement ${index + 1}`}
-                            className="gallery-image"
-                        />
+                        <div key={index} className="gallery-image-container">
+                            <img
+                                src={image}
+                                alt={`Événement ${index + 1}`}
+                                className="gallery-image"
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

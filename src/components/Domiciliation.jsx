@@ -2,13 +2,14 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './Domiciliation.css';
-import image from './44.jpg'
+import image from './44.jpg';
+import img3 from "./contact.png";
 const Domiciliation = () => {
     return (
         <div>
             <Header />
             <main className="domiciliation-page">
-                <section className="domiciliation-section">
+             
                     <div className="image-container">
                         <img src={image} alt="Domiciliation" className="domiciliation-image" />
                         <div className="image-text">
@@ -25,33 +26,24 @@ const Domiciliation = () => {
                             <li>Rapidité dans le traitement de vos demandes</li>
                         </ul>
                     </div>
-                    <section className="contact-form-section">
-                        <h3>Contactez-Nous pour la Domiciliation</h3>
-                        <form className="contact-form">
-                            <label>
-                                Nom:
-                                <input type="text" name="name" required />
-                            </label>
-                            <label>
-                                Email:
-                                <input type="email" name="email" required />
-                            </label>
-                            <label>
-                            Numéro:
-                            <input type="text" name="Numero" required />
-                        </label>
-                            <label>
-                                Téléphone:
-                                <input type="tel" name="phone" required />
-                            </label>
-                            <label>
-                                Message:
-                                <textarea name="message" required></textarea>
-                            </label>
-                            <button type="submit">Envoyer</button>
-                        </form>
-                    </section>
-                </section>
+                  
+                    <div className="contact-section">
+                        <div className="contact-form-section">
+                            <h2>Contactez-Nous</h2>
+                            <form>
+                                <input type="text" name="name" placeholder="Nom" required />
+                                <input type="email" name="email" placeholder="Email" required />
+                                <input type="text" name="subject" placeholder="Sujet" required />
+                                <input type="text" name="numero" placeholder="Numéro" required />
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </div>
+                        <div className="contact-image-section">
+                            <img src={img3} alt="Contact" />
+                        </div>
+                    </div>
+                                 
             </main>
             <Footer />
         </div>

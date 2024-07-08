@@ -1,0 +1,76 @@
+.slogan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .slogan {
+    text-align: left;
+    width: 80%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .slogan h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .slogan p {
+    font-size: 1em;
+    color: #777;
+    background: #e0f7fa;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .slogan p::before,
+  .slogan p::after {
+    content: '';
+    position: absolute;
+    background: #e0f7fa;
+    border-radius: 50%;
+  }
+  
+  .slogan p::before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: -25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slogan p::after {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    right: -35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slogan-1 {
+    margin-left: 0;
+  }
+  
+  .slogan-2 {
+    margin-left: 20px;
+  }
+  
+  .slogan-3 {
+    margin-left: 40px;
+  }
+  

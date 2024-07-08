@@ -85,15 +85,15 @@ const Formations = () => {
                     <div className="stats-container">
                         <div className="stat">
                             <h3>Formations</h3>
-                            <p>15</p>
+                            <p>250+</p>
                         </div>
                         <div className="stat">
                             <h3>Participants</h3>
-                            <p>200+</p>
+                            <p>7500+</p>
                         </div>
                         <div className="stat">
                             <h3>Formateurs</h3>
-                            <p>10</p>
+                            <p>100+</p>
                         </div>
                     </div>
                 </section>

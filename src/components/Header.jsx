@@ -25,7 +25,7 @@ const Header = () => {
                         <li><Link to="/apropos">À propos</Link></li>
                         <li><Link to="/formations">Formation</Link></li>
                         <li className="dropdown" onMouseEnter={handleMouseEnter} >
-                            <button className="dropdown-button">Coworking</button>
+                           <a>Coworking</a>
                             {isDropdownOpen && (
                                 <div className="dropdown-content">
                                     <Link to="/coworking">Coworking</Link>

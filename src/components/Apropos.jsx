@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import './Apropos.css';
 import img3 from "./contact.png";
-import AproposImage from './aprops.jpg';  // Add the appropriate image path
+import AproposImage from './previousformations/4.jpeg';  // Add the appropriate image path
 import img1 from './p2.jpg';
 import img2 from './p1.png';
-import images from './previousformations';  // Assuming this imports your images correctly
+import images from "./previousformations";
 
 const Apropos = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const handleNextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const handlePrevImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNextImage();
+        }, 3000); // Change image every 3 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div>
             <Header />
@@ -17,28 +34,35 @@ const Apropos = () => {
                     <img src={AproposImage} alt="Wiki Space" className="apropos-image" />
                 </section>
                 <section className="slogans-section">
-                    <div className="slogan-card">
-                        <h3>Wiki Space coworking créé par les entrepreneurs pour les entrepreneurs</h3>
-                        <span className="arrow">→</span>
-                        <div className="slogan-description-card">
-                            <p>Wiki Space provides an environment built by entrepreneurs, for entrepreneurs, ensuring all the necessary support for your business to thrive.</p>
+                    <div className="slogan-card" style={{ '--stair-index': 0 }}>
+                        <div className="slogan-content">
+                            <h3>Wiki Space coworking créé par les entrepreneurs pour les entrepreneurs</h3>
+                            <div className="slogan-description">
+                                <p>Wiki Space fournit un environnement créé par des entrepreneurs, pour des entrepreneurs, assurant tout le soutien nécessaire pour que votre entreprise prospère.</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="slogan-card">
-                        <h3>Les formations qui éveillent la conscience de vos compétences</h3>
-                        <span className="arrow">→</span>
-                        <div className="slogan-description-card">
-                            <p>WST offre un environnement créé par des entrepreneurs, pour des entrepreneurs, assurant tout le soutien nécessaire pour que votre entreprise prospère.</p>
+                    <div className="slogan-card" style={{ '--stair-index': 1 }}>
+                        <div className="slogan-content">
+                            <h3>Les formations qui éveillent la conscience de vos compétences</h3>
+                            <div className="slogan-description">
+                                <p>WST offre un environnement créé par des entrepreneurs, pour des entrepreneurs, assurant tout le soutien nécessaire pour que votre entreprise prospère.</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="slogan-card">
-                        <h3>Le cabinet WST né d'une véritable  passion pour accompagner la diversité de vos enjeux. </h3>
-                        <span className="arrow">→</span>
-                        <div className="slogan-description-card">
-                            <p>Notre savoir-faire et nos compétences reposent sur les formations variées effectuées durant ces dernières années. Quel que soit votre projet, WST vous accompagne, identifie l'ensemble de vos besoins et vous propose un package répondant à votre attente.</p>
+                    <div className="slogan-card" style={{ '--stair-index': 2 }}>
+                        <div className="slogan-content">
+                            <h3>Le cabinet WST né d'une véritable passion pour accompagner la diversité de vos enjeux.</h3>
+                            <div className="slogan-description">
+                                <p>Notre savoir-faire et nos compétences reposent sur les formations variées effectuées durant ces dernières années. Quel que soit votre projet, WST vous accompagne, identifie l'ensemble de vos besoins et vous propose un package répondant à votre attente.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+
+
+
                 <section className="apropos-section">
                     <h2>À propos de Wiki Space</h2>
                     <p>
@@ -58,42 +82,35 @@ const Apropos = () => {
                 </section>
                 <section className="gallery-section">
                     <h2>Galerie des Formations Inspirantes</h2>
-                    <div className="photo-grid">
-                        {images.map((image, index) => (
-                            <img src={image} alt={`Gallery ${index + 1}`} key={index} />
-                        ))}
+                    <div className="photo-gallery">
+                        <button className="gallery-arrow left-arrow" onClick={handlePrevImage}>←</button>
+                        <img src={images[currentImageIndex]} alt={`Gallery ${currentImageIndex + 1}`} className="gallery-image" />
+                        <button className="gallery-arrow right-arrow" onClick={handleNextImage}>→</button>
                     </div>
                 </section>
-                <div className="partners-section">
-                    <h1>Nos Partenaires</h1>
-                    <img src={img1} className='ss' width="150px" alt="Partner 1" />
-                    <img src={img2} className="ss" width="150px" alt="Partner 2" />
-                </div>
                 <section className="partners-and-contact">
-                    <div className="contact-form-section">
-                        <h2>Contactez-Nous</h2>
-                        <form>
-                            <label>
-                                Nom:
-                                <input type="text" name="name" required />
-                            </label>
-                            <label>
-                                Email:
-                                <input type="email" name="email" required />
-                            </label>
-                            <label>
-                                Sujet:
-                                <input type="text" name="subject" required />
-                            </label>
-                            <label>
-                                Message:
-                                <textarea name="message" required></textarea>
-                            </label>
-                            <button type="submit">Envoyer</button>
-                        </form>
-                    </div>
                     <div className="partners-section">
-                        <img src={img3} width="500px" alt="Contact" />
+                        <h2>Nos Partenaires</h2>
+                        <div className="partners-logos">
+                            <img src={img1} alt="Partner 1" />
+                            <img src={img2} alt="Partner 2" />
+                        </div>
+                    </div>
+                    <div className="contact-section">
+                        <div className="contact-form-section">
+                            <h2>Contactez-Nous</h2>
+                            <form>
+                                <input type="text" name="name" placeholder="Nom" required />
+                                <input type="email" name="email" placeholder="Email" required />
+                                <input type="text" name="subject" placeholder="Sujet" required />
+                                <input type="text" name="numero" placeholder="Numéro" required />
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </div>
+                        <div className="contact-image-section">
+                            <img src={img3} alt="Contact" />
+                        </div>
                     </div>
                 </section>
             </main>

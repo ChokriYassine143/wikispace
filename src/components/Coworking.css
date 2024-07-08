@@ -1,3 +1,4 @@
+/* Reset and global styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -85,25 +86,58 @@ body {
     text-align: center;
 }
 
-.second-div {
+.second-div,
+.third-div {
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
 }
 
-.second-div img {
-    width: 30%;
+.second-div .image-container,
+.third-div .image-container {
+    width: 30%; /* Adjust this width as needed */
+    margin-right: 20px; /* Margin between images */
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.second-div img,
+.third-div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.second-div .image-container:hover img,
+.third-div .image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-tooltip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.second-div .image-container:hover .image-tooltip,
+.third-div .image-container:hover .image-tooltip {
+    opacity: 1;
 }
 
 .third-div {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center align */
 }
 
 .contact-form {
